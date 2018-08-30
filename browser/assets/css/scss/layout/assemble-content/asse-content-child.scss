@@ -1,0 +1,33 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+.content-child-asse {
+    .grid-container {
+        .grid-menu {
+            ul {
+                >li {
+                    color: $color-text-menu-pchild-asse !important;
+                    background: $color-background-menu-pchild-asse !important;
+                }
+                a {
+                    li {
+                        color: $color-text-normal-pchild-asse !important;
+                    }
+                }
+                a:hover {
+                    li {
+                        background: $color-text-menu-pchild-asse !important;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+        .grid-content {
+            .grid-content-child {
+                p:first-child {
+                    color: $color-text-normal-pchild-asse !important;
+                }
+            }
+        }
+    }
+}

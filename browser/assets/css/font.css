@@ -1,0 +1,52 @@
+/*FONT Prier Sans Bold*/
+@font-face{
+    font-family: 'PierSans';
+    src: url("../fonts/pier-bold.otf") format("opentype");
+}
+@font-face{
+    font-family: 'SerifProRegular';
+    src: url("../fonts/SourceSerifPro-Regular.ttf") format("opentype");
+}
+
+
+/*FONT Source Sans Pro*/
+/*Regular*/
+@font-face{
+    font-family: 'SansProRegular';
+    src: url("../fonts/SourceSansPro-Regular.ttf") format("opentype");
+}
+/*Light*/
+@font-face{
+    font-family: 'SansProLight';
+    src: url("../fonts/SourceSansPro-Light.ttf") format("opentype");
+}
+
+/*ExtraLight*/
+@font-face{
+    font-family: 'SansProExtraLight';
+    src: url("../fonts/SourceSansPro-ExtraLight.ttf") format("opentype");
+}
+
+/*Semi Bold*/
+@font-face{
+    font-family: 'SansProSemiBold';
+    src: url("../fonts/SourceSansPro-SemiBold.ttf") format("opentype");
+}
+
+/*Bold*/
+@font-face{
+    font-family: 'SansProBold';
+    src: url("../fonts/SourceSansPro-Bold.ttf") format("opentype");
+}
+
+/*Black*/
+@font-face{
+    font-family: 'SansProBlack';
+    src: url("../fonts/SourceSansPro-Black.ttf") format("opentype");
+}
+
+/*Italic*/
+@font-face{
+    font-family: 'SansProLightItalic';
+    src: url("../fonts/SourceSansPro-LightItalic.ttf") format("opentype");
+}

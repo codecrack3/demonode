@@ -1,0 +1,15 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+.image-title-asse {
+    .title-img-text {
+        div {
+            p:first-child {
+                color: $color-text-normal-pchild-asse !important;
+            }
+            p:last-child {
+                color: $color-text-normal-pchild-asse !important;
+            }
+        }
+    }
+}

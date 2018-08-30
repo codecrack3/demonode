@@ -1,0 +1,214 @@
+@mixin container-flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    @content;
+}
+
+@mixin set-width-height($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin image-background($url) {
+    background: $url no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+@mixin set-font-size-color($font, $size, $color) {
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin button($bd-radius, $pad-tb, $pad-lr) {
+    border-radius: $bd-radius;
+    padding: $pad-tb $pad-lr;
+}
+
+@mixin set-color-contact($color) {
+    border-top-color: $color;
+    p {
+        color: $color;
+    }
+}
+
+@mixin set-font($size, $style, $color) {
+    font-size: $size;
+    font-family: $style;
+    color: $color;
+}
+
+@mixin set-btn-next-chapter($color) {
+    @include set-font-size-color(SansProBold, $font-size-16-pchild, #7B92AF);
+    @include button(0px, 9px, 38px);
+    border-top: 8px solid $color;
+}
+
+@mixin set-color($i) {
+    @if ($i==1) {
+        color: #EF6059;
+    }
+    @else if($i==2) {
+        color: #FFD41D;
+    }
+    @else if($i==3) {
+        color: #5DC9AC;
+    }
+    @else if($i==4) {
+        color: #FFB053;
+    }
+    @else if($i==5) {
+        color: #95B3FF;
+    }
+    @else if($i==6) {
+        color: #FFA2DC;
+    }
+    @else if($i==7) {
+        color: #BD8DFF;
+    }
+    @else {
+        color: #4EDE49;
+    }
+}
+
+@mixin set-border-color($i) {
+    @if ($i==1) {
+        border-top: 8px solid #EF6059;
+    }
+    @else if($i==2) {
+        border-top: 8px solid #FFD41D;
+    }
+    @else if($i==3) {
+        border-top: 8px solid #5DC9AC;
+    }
+    @else if($i==4) {
+        border-top: 8px solid #FFB053;
+    }
+    @else if($i==5) {
+        border-top: 8px solid #95B3FF;
+    }
+    @else if($i==6) {
+        border-top: 8px solid #FFA2DC;
+    }
+    @else if($i==7) {
+        border-top: 8px solid #BD8DFF;
+    }
+    @else {
+        border-top: 8px solid #4EDE49;
+    }
+}
+
+@mixin set-color-background($i) {
+    @if ($i==1) {
+        background: #EF6059;
+    }
+    @else if($i==2) {
+        background: #FFD41D;
+    }
+    @else if($i==3) {
+        background: #5DC9AC;
+    }
+    @else if($i==4) {
+        background: #FFB053;
+    }
+    @else if($i==5) {
+        background: #95B3FF;
+    }
+    @else if($i==6) {
+        background: #FFA2DC;
+    }
+    @else if($i==7) {
+        background: #BD8DFF;
+    }
+    @else {
+        background: #4EDE49;
+    }
+}
+
+
+//RESPONSIVE
+
+@mixin responsive($width) {
+    @media screen and(max-width: $width) {
+        @content;
+    }
+}
+
+@mixin seven-bg($i) {
+    @if ($i==1) {
+        background: #FFEDA4;
+    }
+    @else if($i==2) {
+        background: #BDE9DD;
+    }
+    @else if($i==3) {
+        background: #FFDFB9;
+    }
+    @else if($i==4) {
+        background: #D4E0FF;
+    }
+    @else if($i==5) {
+        background: #FFD9F0;
+    }
+    @else if($i==6) {
+        background: #E4D1FF;
+    }
+    @else {
+        background: #C6FFC3;
+    }
+}
+
+@mixin set-color-background-404($i) {
+    @if ($i==1) {
+        background: #EF6059;
+    }
+    @else if($i==2){
+        background: #FFD41D;
+    }
+    @else if($i==3){
+        background: #5DC9AC;
+    }
+    @else if($i==4){
+        background: #FFB053;
+    }
+    @else if($i==5){
+        background: #95B3FF;
+    }
+    @else if($i==6){
+        background: #FFA2DC;
+    }
+    @else if($i==7){
+        background: #BD8DFF;
+    }
+    @else if ($i==8) {
+        background: #4EDE49;
+    }
+    @else if($i==9){
+        background: #5DC9AC;
+    }
+    @else if($i==10){
+        background: #FFB053;
+    }
+    @else if($i==11){
+        background: #EF6059;
+    }
+    @else if($i==12){
+        background: #FFD41D;
+    }
+    @else if($i==13){
+        background: #BD8DFF;
+    }
+    @else if($i==14){
+        background: #4EDE49;
+    }
+    @else if($i==15){
+        background: #95B3FF;
+    }
+    @else{
+        background: #FFA2DC;
+    }
+}

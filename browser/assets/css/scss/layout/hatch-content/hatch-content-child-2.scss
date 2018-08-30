@@ -1,0 +1,24 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+.fix-color-hatch-2 {
+    .content-sub {
+        >p:first-child {
+            color: $color-text-normal-pchild-hatch !important;
+        }
+        .contain-text-chap-2 {
+            div {
+                 :first-child {
+                    border-bottom: 2px solid $color-text-menu-pchild-hatch !important;
+                    color: $color-text-normal-pchild-hatch !important;
+                }
+            }
+        }
+        .color-content {
+            background: $color-text-menu-pchild-hatch !important;
+        }
+        .image-child-2 {
+            background: $color-text-menu-pchild-hatch !important;
+        }
+    }
+}

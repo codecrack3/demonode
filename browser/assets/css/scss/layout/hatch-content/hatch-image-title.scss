@@ -1,0 +1,15 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+.image-title-hatch {
+    .title-img-text {
+        div {
+            p:first-child {
+                color: $color-text-normal-pchild-hatch !important;
+            }
+            p:last-child {
+                color: $color-text-normal-pchild-hatch !important;
+            }
+        }
+    }
+}

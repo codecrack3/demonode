@@ -1,0 +1,162 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+.sub-3 {
+    .image-zoom-in-down {
+        position: relative;
+        img:first-child {
+            @include responsive(1680px) {
+                height: 1200px;
+            }
+            @include responsive(1440px) {
+                height: 1100px;
+            }
+            @include responsive(1366px) {
+                height: 1000px;
+            }
+            @include responsive(1024px) {
+                height: 800px;
+            }
+            width: 100%;
+            height: 1500px;
+        }
+        img:nth-child(2) {
+            @include responsive(1600px) {
+                right: 12%;
+                @include set-width-height(78px, 78px);
+            }
+            @include responsive(1024px) {
+                right: 12%;
+                @include set-width-height(58px, 58px);
+            }
+            position: absolute;
+            right: 12%;
+            top: -3%;
+            @include set-width-height(88px, 88px);
+        }
+        img:last-child {
+            @include responsive(1024px) {
+                right: 4%;
+                @include set-width-height(58px, 58px);
+            }
+            position: absolute;
+            right: 5%;
+            top: -3%;
+            @include set-width-height(88px, 88px);
+        }
+    }
+}
+
+.btn-last-sub-3 {
+    @include container-flex(row);
+    justify-content: space-between;
+    a {
+        @extend %button-child;
+        width: 206px;
+        text-align: center;
+        text-decoration: none;
+        align-self: flex-end;
+        margin-top: 20px;
+    }
+    a:hover {
+        @extend %button-child-hover;
+    }
+}
+
+.fix-end-chapter-3 {
+    width: 100%;
+    background: #fff;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+a.button-next-chapter-heart {
+    cursor: pointer;
+    @include responsive(1024px) {
+        padding: 9px 29px !important;
+    }
+    text-decoration: none !important;
+    @include set-btn-next-chapter(#FFD41D);
+    -moz-box-shadow: 1px 2px 4px rgba(207, 207, 207, 0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(207, 207, 207, .5);
+    box-shadow: 1px 2px 4px rgba(207, 207, 207, .5);
+    align-self: flex-end !important;
+    >div {
+        width: 129px;
+        @include container-flex(row);
+        justify-content: center;
+        >img {
+            @include set-width-height(20px, 23px);
+            margin: 0;
+            margin-right: 20px;
+        }
+        >p {
+            @include set-font-size-color(SansProBold, 20px, #FFD41D);
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+// section#learn-to-day {
+//     padding: 130px 0 100px 0;
+//     width: 100%;
+//     background: #F6F9FC;
+//     margin-top: -100px;
+//     .container-learn {
+//         @include responsive(1024px) {
+//             width: 65%;
+//         }
+//         width: 45%;
+//         margin: 0 auto;
+//         position: relative;
+//         p {
+//             @include set-font-size-color(SansProLight, $font-size-30-pchild, #344E71);
+//         }
+//         .container-arrow-seven-color {
+//             position: relative;
+//             .arrow-contai {
+//                 position: relative;
+//                 div:first-child {
+//                     width: 0;
+//                     height: 0;
+//                     border-left: 30px solid transparent;
+//                     border-right: 30px solid transparent;
+//                     border-bottom: 30px solid $color-text-normal-pchild-heart;
+//                     transform: rotate(90deg);
+//                     -ms-transform: rotate(90deg);
+//                     -webkit-transform: rotate(90deg);
+//                     position: absolute;
+//                     top: -5px;
+//                     left: 55px;
+//                     z-index: 1000;
+//                 }
+//                 div:last-child {
+//                     width: 82px;
+//                     height: 20px;
+//                     background: $color-text-normal-pchild-heart;
+//                 }
+//             }
+//             .seven-contai {
+//                 @include container-flex(row);
+//                 position: absolute;
+//                 z-index: 100;
+//                 top: 0px;
+//                 left: 79px;
+//                 @for $i from 1 through 7 {
+//                     >.color-con-#{$i} {
+//                         @include seven-bg($i);
+//                         width: 82px;
+//                         height: 20px;
+//                     }
+//                 }
+//             }
+//         }
+//         p:last-child {
+//             text-align: right;
+//             @include set-font-size-color(SansProRegular, 20px, #344E71);
+//         }
+//     }
+// }

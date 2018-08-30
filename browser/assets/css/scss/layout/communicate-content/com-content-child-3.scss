@@ -1,0 +1,29 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+a.button-next-chapter-com {
+    @include responsive(1024px) {
+        padding: 9px 29px !important;
+    }
+    text-decoration: none !important;
+    @include set-btn-next-chapter(#95B3FF);
+    -webkit-box-shadow: 3px 3px 4px 4px rgba(207, 207, 207, .5);
+    -moz-box-shadow: 3px 3px 4px 4px rgba(207, 207, 207, .5);
+    box-shadow: 2px 2px 4px 4px rgba(207, 207, 207, .5);
+    align-self: flex-end !important;
+    >div {
+        width: 129px;
+        @include container-flex(row);
+        justify-content: center;
+        >img {
+            @include set-width-height(20px, 23px);
+            margin: 0;
+            margin-right: 20px;
+        }
+        >p {
+            @include set-font-size-color(SansProBold, 20px, #95B3FF);
+            margin: 0;
+            text-align: center;
+        }
+    }
+}

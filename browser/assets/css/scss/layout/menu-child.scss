@@ -1,0 +1,64 @@
+@import "../helper/mixin";
+@import "../helper/variable";
+@import "../helper/placehold";
+
+section#menu-child{
+    margin-top: 50px;
+    padding-bottom: 90px;
+    .container-menu-child{
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        >p{
+            @include set-font-size-color(SansProBold, $font-size-18-pchild, #344E71);
+            border-top: 3px solid #344E71;
+            display: inline;
+            padding-bottom: 50px;
+        }
+        .grid-menu-child{
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-row-gap: 40px;
+            justify-content: space-between;
+            .flex-child-menu{
+                @include responsive(1024px){
+                    @include set-width-height(158px,126px);
+                }
+                @include set-width-height(188px,146px);
+                @include container-flex(column);
+                -webkit-box-shadow: 3px 3px 4px 4px rgba(207, 207, 207, .5); 
+                -moz-box-shadow:    3px 3px 4px 4px rgba(207, 207, 207, .5); 
+                box-shadow:         2px 2px 4px 4px rgba(207, 207, 207, .5);
+                img{
+                    @include responsive(1024px){
+                        @include set-width-height(45px,40px);
+                    }
+                    width: 49px;
+                    height: 45px;
+                    align-self: center;
+                    margin-top: 20px;
+                }
+            }
+            @for $i from 1 through 8 {
+                .item-menu-child-#{$i} {
+                    @include set-border-color($i);
+                    p{
+                        @include responsive(1024px){
+                            font-size: $font-size-26-pchild - 5px;
+                        }
+                        font-size: $font-size-26-pchild;
+                        font-family: SansProBold;
+                        @include set-color($i);
+                        margin-top: 20px;
+                    }
+                    @if($i==3){
+                        img{
+                            width: 21px;
+                        }
+                    }   
+                }
+            } 
+        }
+    }
+}

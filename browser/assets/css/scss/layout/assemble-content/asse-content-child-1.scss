@@ -1,0 +1,55 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+.active-menu-asse {
+    @include responsive(1680px) {
+        width: 465px;
+    }
+    @include responsive(1600px) {
+        width: 450px;
+    }
+    @include responsive(1440px) {
+        width: 400px;
+    }
+    @include responsive(1366px) {
+        width: 370px;
+    }
+    @include responsive(1024px) {
+        width: 290px;
+    }
+    background: $color-text-menu-pchild-asse;
+    color: #fff !important;
+    width: 470px;
+    >li {
+        color: #fff !important;
+        >span,
+        i {
+            color: #fff !important;
+        }
+    }
+}
+
+.fix-color-asse-1 {
+    >p:first-child {
+        color: $color-text-normal-pchild-asse !important;
+    }
+    >div:nth-child(3) {
+        .line-start-inside {
+            .line-start-inside-1 {
+                background: $color-text-normal-pchild-asse;
+            }
+            .line-start-inside-2 {
+                background: $color-text-normal-pchild-asse;
+            }
+            >p {
+                color: $color-text-normal-pchild-asse;
+            }
+        }
+        .line-end-inside {
+            background: $color-text-normal-pchild-asse;
+        }
+    }
+    p.text-hight-light {
+        color: $color-text-normal-pchild-asse;
+    }
+}

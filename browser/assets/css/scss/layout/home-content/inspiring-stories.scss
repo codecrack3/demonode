@@ -1,0 +1,232 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+.fix-width-100{
+    width: 100% !important;
+    margin-top: 40px !important;
+    margin-bottom: 0px !important;
+}
+section#inspiring-stories{
+    @include responsive(800px){
+        padding: 30px 0;
+    }
+    @include responsive(600px){
+        padding: 10px 0;
+    }
+    padding: 68px 0 0 0;
+    @include container-flex(column);
+    .container-inspi-stories-text{
+        width: 85%;
+        margin: 0 auto;
+        position: relative;
+        p:first-child{
+            @include responsive(800px){
+                text-align: center;
+            }
+            @include responsive(414px){
+                font-size: 20px;
+            }
+            @include set-font-size-color(SansProBold, 40px, #161624);
+            letter-spacing: 1.5px;
+        }
+        p:nth-child(2){
+            @include responsive(800px){
+                text-align: center;
+            }
+            @include responsive(414px){
+                font-size: 16px;
+                text-transform: lowercase;
+            }
+            @include set-font-size-color(SansProBold, 18px, #161624);
+        }
+        p::first-letter{
+            @include responsive(414px){
+                text-transform: uppercase;
+            }
+        }
+        img{
+            @include responsive(800px){
+                top: 5px;
+                left: 36%;
+            }
+            @include responsive(600px){
+                left: 31%;
+            }
+            @include responsive(414px){
+                left: 36%;
+                top: 0;
+                width: 100px;
+            }
+            position: absolute;
+            top: 16px;
+            left: -81px;
+            z-index: -1;
+        }
+    }
+    .container-inspi-stories-image{
+        @include responsive(800px){
+            grid-template-columns: auto auto;
+            grid-row-gap: 20px;
+            justify-content: space-around;
+        }
+        @include responsive(414px){
+            margin-top: 30px;
+        }
+        @include responsive(384px){
+            width: 85%;
+        }
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-row-gap: 40px;
+        justify-content: space-between;
+        .inspi-stories-image{
+            @include responsive(414px){
+                width: 150px;
+                height: 180px;
+            }
+            @include responsive(320px){
+                width: 120px;
+                height: 140px;
+            }
+            @include container-flex(column);
+            width: 220px;
+            height: 270px;
+            align-items: center;
+            .circle-inspi-stories-image{
+                @include responsive(1024px){
+                    width: 170px;
+                    height: 170px;
+                }
+                @include responsive(414px){
+                    width: 120px;
+                    height: 120px;
+                }
+                @include responsive(320px){
+                    width: 100px;
+                    height: 100px;
+                }
+                width: 210px;
+                height: 210px;
+                border-radius: 50%;
+                transition: all 0.5s;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+            }
+            .circle-inspi-stories-image:hover{
+                @include responsive(1024px){
+                    width: 180px;
+                    height: 180px;
+                }
+                @include responsive(414px){
+                    width: 130px;
+                    height: 130px;
+                }
+                @include responsive(320px){
+                    width: 110px;
+                    height: 110px;
+                }
+              box-shadow:         0px 2px 4px 1px rgba(207, 207, 207, 1);
+              box-shadow:         0px 2px 4px 1px rgba(207, 207, 207, 1);
+              box-shadow:         0px 2px 4px 1px rgba(207, 207, 207, 1);
+                // -moz-box-shadow: 1px 2px 4px rgba(207, 207, 207, 0.5);
+                // -webkit-box-shadow: 1px 2px 4px rgba(207, 207, 207, .5);
+                // box-shadow: 1px 2px 4px rgba(207, 207, 207, .5);
+                width: 220px;
+                height: 220px;
+            }
+            p{
+                @include responsive(320px){
+                    font-size: 10px;
+                }
+                text-align: center;
+                @include set-font-size-color(SansProBold, 14px, #161624);
+            }
+        }
+    }
+    >a.inspi-read-all{
+        text-align: center;
+        padding: 9px 20px;
+        @include set-font-size-color(SansProSemiBold, 16px ,#161624);
+        border: 2px solid #161624;
+        width: 250px;
+        align-self: center;
+        text-transform: uppercase;
+        margin-top: 70px;
+        transition: all 0.5s;
+        &:hover{
+            border: 2px solid #7B92AF;
+            color: #7B92AF;
+        }
+    }
+    .dive-stories{
+        @include responsive(800px){
+            margin-top: 50px;
+        }
+        margin: 100px 0 10px 0;
+        background: #F6F9FC;
+        padding: 40px 0 20px 0;
+        >p{
+            @include responsive(414px){
+                font-size: 30px;
+            }
+            @include set-font-size-color(SansProBold, 40px, #161624);
+            margin: 0 auto;
+            width: 85%;
+            position: relative;
+            z-index: 100;
+            letter-spacing: 1.5px;
+            >img{
+                @include responsive(414px){
+                    left: -58px;
+                    width: 130px;
+                }
+                position: absolute;
+                top: -10px;
+                left: -80px;
+                z-index: -10;
+                width: 160px;
+            }
+        }
+        >div{
+            width: 85%;
+            margin: 40px auto;
+            @include container-flex(column);
+            >p{
+                @include responsive(800px){
+                    text-align: center;
+                }
+                @include responsive(414px){
+                    font-size: 16px;
+                }
+                @include set-font-size-color(SansProBold, 20px, #161624);
+                text-align: left;
+            }
+            >a{
+                @include responsive(320px){
+                    width: 230px;
+                }
+                align-self: center;
+                @include set-font-size-color(SansProRegular, 16px, #fff);
+                width: 270px;
+                text-align: center;
+                padding: 8px 19px;
+                background: #344E71;
+                border: 1px solid #344E71;
+                margin-top: 40px;
+                transition: all 0.5s;
+                &:hover{
+                    background: #161624;
+                }
+            }
+        }
+    }
+} 

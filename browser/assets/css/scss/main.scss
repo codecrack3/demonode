@@ -1,0 +1,108 @@
+body {
+    font: 15px/1.5 SansProLight, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    letter-spacing: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*NAVIGATION*/
+
+@import "layout/navigation";
+
+//------------HOME
+
+/*IMAGE-HEADER-CONTENT*/
+
+@import "layout/home-content/image-header";
+
+/*MENU-VERTICAL*/
+
+@import "layout/home-content/menu-vertical";
+
+/*MAIN CONTENT HOME*/
+
+@import "layout/home-content/main-content-home";
+
+/*INSPIRING STORIES*/
+
+@import "layout/home-content/inspiring-stories";
+//------------END HOME
+
+/*HEART*/
+
+@import "layout/heart-content/image-title";
+@import "layout/heart-content/content-child";
+@import "layout/heart-content/content-child-1";
+@import "layout/heart-content/content-child-2";
+@import "layout/heart-content/content-child-3";
+
+/*ASSEMBLE*/
+
+@import "layout/assemble-content/asse-image-title";
+@import "layout/assemble-content/asse-content-child";
+@import "layout/assemble-content/asse-content-child-1";
+@import "layout/assemble-content/asse-content-child-2";
+@import "layout/assemble-content/asse-content-child-3";
+
+/*TEST*/
+
+@import "layout/test-content/test-image-title";
+@import "layout/test-content/test-content-child";
+@import "layout/test-content/test-content-child-1";
+@import "layout/test-content/test-content-child-2";
+@import "layout/test-content/test-content-child-3";
+
+/*COMMUNICATE*/
+
+@import "layout/communicate-content/com-image-title";
+@import "layout/communicate-content/com-content-child";
+@import "layout/communicate-content/com-content-child-1";
+@import "layout/communicate-content/com-content-child-2";
+@import "layout/communicate-content/com-content-child-3";
+
+/*HUSTLE*/
+
+@import "layout/hustle-content/hustle-image-title";
+@import "layout/hustle-content/hustle-content-child";
+@import "layout/hustle-content/hustle-content-child-1";
+@import "layout/hustle-content/hustle-content-child-2";
+@import "layout/hustle-content/hustle-content-child-3";
+
+/*HATCH IT*/
+
+@import "layout/hatch-content/hatch-image-title";
+@import "layout/hatch-content/hatch-content-child";
+@import "layout/hatch-content/hatch-content-child-1";
+@import "layout/hatch-content/hatch-content-child-2";
+@import "layout/hatch-content/hatch-content-child-3";
+// 02-content
+@import "layout/02-content/image-map";
+
+/*stories*/
+
+@import "layout/stories";
+
+/*CONTACT*/
+
+@import "layout/contact";
+
+/*FOOTER*/
+
+@import "layout/footer";
+
+/*404*/
+
+@import "layout/404";

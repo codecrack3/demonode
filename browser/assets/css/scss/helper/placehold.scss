@@ -1,0 +1,9 @@
+%button-child{
+    @include set-font-size-color(SansProBold, $font-size-16-pchild,#7B92AF);
+    @include button(0px, 9px, 38px);
+    border: 2px solid #7B92AF;
+}
+%button-child-hover{
+    color: #161624;
+    border: 2px solid #161624;
+}

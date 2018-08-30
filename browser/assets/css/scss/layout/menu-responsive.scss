@@ -1,0 +1,12 @@
+@import "../helper/mixin";
+@import "../helper/variable";
+@import "../helper/placehold";
+
+section#header, section#menu-vertical{
+    display: none;
+}
+
+section#menu-respon{
+    background: #fff;
+    height: 62px;
+}

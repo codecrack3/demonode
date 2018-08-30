@@ -1,0 +1,395 @@
+@import "../../helper/mixin";
+@import "../../helper/variable";
+@import "../../helper/placehold";
+section#content-child {
+    @include responsive(800px){
+        width: 100%;
+        padding-top: 0px;
+    }
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+    .grid-container {
+        @include responsive(1680px) {
+            grid-template-columns: 30% 66%;
+        }
+        @include responsive(800px){
+            @include container-flex(column);
+        };
+        display: grid;
+        grid-template-columns: 27% 69%;
+        justify-content: space-between;
+        position: relative;
+        .grid-menu {
+            @include responsive(800px){
+                display: none;
+            };
+            ul {
+                @include container-flex(column);
+                >li {
+                    @include set-font-size-color(SansProBold, $font-size-18-pchild, $color-text-menu-pchild-heart);
+                    background: $color-background-menu-pchild-heart;
+                    justify-content: center;
+                }
+                li {
+                    @include responsive(1680px) {
+                        width: 465px;
+                    }
+                    @include responsive(1600px) {
+                        width: 450px;
+                    }
+                    @include responsive(1440px) {
+                        width: 400px;
+                    }
+                    @include responsive(1366px) {
+                        width: 370px;
+                    }
+                    @include responsive(1024px) {
+                        width: 290px;
+                    }
+                    width: 470px;
+                    height: 68px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 40px;
+                }
+                a {
+                    @include responsive(1680px) {
+                        width: 465px;
+                    }
+                    @include responsive(1600px) {
+                        width: 450px;
+                    }
+                    @include responsive(1440px) {
+                        width: 400px;
+                    }
+                    @include responsive(1366px) {
+                        width: 370px;
+                    }
+                    @include responsive(1024px) {
+                        width: 290px;
+                    }
+                    width: 470px;
+                    li {
+                        @include responsive(1024px) {
+                            font-size: 16px !important;
+                        }
+                        @include set-font-size-color(SansProRegular, $font-size-18-pchild, $color-text-normal-pchild-heart);
+                        letter-spacing: 1px;
+                        position: relative;
+                        span {
+                            @include responsive(1680px) {
+                                width: 320px;
+                            }
+                            @include responsive(1440px) {
+                                width: 290px;
+                            }
+                            @include responsive(1366px) {
+                                width: 270px;
+                            }
+                            @include responsive(1024px) {
+                                width: 190px;
+                            }
+                            width: 340px;
+                        }
+                        i {
+                            position: absolute;
+                            right: 25px;
+                        }
+                    }
+                }
+                a:hover {
+                    li {
+                        background: $color-text-menu-pchild-heart;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .grid-content {
+            .grid-content-child {
+                @include responsive(800px){
+                    @include container-flex(column);
+                    justify-content: center;
+                }
+                padding: 20px 38px 45px 38px;
+                margin-bottom: 50px;
+                -moz-box-shadow: 23px 14px 17px 4px rgba(207, 207, 207, .2);
+                -webkit-box-shadow: 23px 14px 17px 4px rgba(207, 207, 207, .2);
+                box-shadow: 23px 14px 17px 4px rgba(207, 207, 207, .2);
+                p:first-child {
+                    @include responsive(800px){
+                    text-align: center;
+                    }
+                    @include set-font-size-color(SansProRegular, $font-size-25-pchild, $color-text-normal-pchild-heart);
+                }
+                p:nth-child(2) {
+                    @include responsive(800px){
+                        text-align: center;
+                        }
+                    @include set-font-size-color(SansProRegular, $font-size-16-pchild, #161624);
+                    letter-spacing: 1px;
+                    margin: 30px 0 60px 0;
+                }
+                a {
+                    @include responsive(800px){
+                        text-align: center;
+                        width: 30%;
+                        align-self: center;
+                    }
+                    @include responsive(600px){
+                        width: 50%;
+                    }
+                    @include responsive(414px){
+                        width: 222px;
+                        padding: 8px 31px;
+                    }
+                    @extend %button-child;
+                    cursor: pointer;
+                }
+                a:hover {
+                    @extend %button-child-hover;
+                }
+            }
+        }
+    }
+}
+
+.ticky-bar-left-chapter{
+    position: fixed;
+    top: 10%;
+}
+
+div.popup {
+    @include responsive(1366px){
+        padding-top: 12%;
+    }
+    @include responsive(1024px){
+        padding-top: 9%;
+    }
+    @include responsive(800px){
+        padding-top: 15%;
+    }
+    @include responsive(600px){
+        padding-top: 20%;
+    }
+    @include responsive(414px) {
+        padding-top: 11%;
+    }
+    // @include responsive(360px) {
+    //     padding-top: 115px;
+    // }
+    // @include responsive(320px) {
+    //     padding-top: 45px;
+    // }
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 5000;
+    /* Sit on top */
+    padding-top: 15%;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    /* Modal Content */
+    .modal-content {
+        @include responsive(1680px) {
+            width: 40%;
+        }
+        @include responsive(1600px) {
+            width: 44%;
+        }
+        @include responsive(1440px) {
+            width: 50%;
+        }
+        @include responsive(1024px) {
+            width: 70%;
+        }
+        // @include responsive(600px) {
+        //     width: 55%;
+        // }
+        // @include responsive(414px) {
+        //     width: 70%;
+        // }
+        // @include responsive(360px) {
+        //     width: 73%;
+        // }
+        // @include responsive(320px) {
+        //     width: 81%;
+        // }
+        margin: auto;
+        padding: 0px;
+        border: 0px;
+        width: 35%;
+        border-radius: 0px;
+        >div.enter-email {
+            @include container-flex(column);
+            justify-content: center;
+            padding: 0px;
+            form {
+                @include container-flex(column);
+                .container-form {
+                    @include responsive(1024px){
+                        padding: 20px 70px 40px 70px;
+                    }
+                    @include responsive(800px){
+                        padding: 0px 30px 30px 40px;
+                        grid-template-columns: 100%;
+                    }
+                    @include responsive(384px){
+                        padding: 0px 20px 30px 20px;
+                    }
+                    width: 100%;
+                    background-color: #fff;
+                    padding: 20px 30px 40px 70px;
+                    display: flex;
+                    flex-direction: column;
+                    >p.sub-send-newsletter{
+                        @include responsive(600px){
+                            width: 100%;
+                        }
+                        @include set-font-size-color(SansProRegular, 16px, #344E71);
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                    >div{
+                        @include responsive(600px){
+                            width: 85%;
+                        }
+                        width: 60%;
+                        margin: 0 auto;
+                        padding: 10px 0 20px;
+                        >p {
+                            @include set-font-size-color(SansProRegular, 16px, #344E71);
+                            margin: 20px 0 0 0;
+                        }
+                        .custom-select {
+                            width: 100%;
+                            z-index: 10;
+                            position: relative;
+                            select {
+                                @include set-font-size-color(SansProRegular, 16px, #161624);
+                                padding: 4px 25px;
+                                border: 1px solid #667A94;
+                                width: 100%;
+                            } 
+    
+                        }
+                        input[type="text"] {
+                            border-radius: 0px;
+                            border: 1px solid #667A94;
+                            padding: 6px 25px;
+                            width: 100%;
+                            background: transparent;
+                            align-self: center;
+                            @include set-font-size-color(SansProRegular, 16px, #161624);
+                        }
+                    }
+                    >img{
+                        @include responsive(1024px){
+                            width: 300px;
+                        }
+                        @include responsive(800px){
+                            display: none;
+                        }
+                        width: 400px;
+                    }
+                }
+                .group-btn-download{
+                    // @include responsive(1600px){
+                    //     width: 80%;
+                    // }
+                    // @include responsive(800px){
+                    //     width: 70%;
+                    // }
+                    @include responsive(600px){
+                        flex-direction: column;
+                    }
+                    @include responsive(414px){
+                        margin: 0 auto;
+                    }
+                    @include container-flex(row);
+                    justify-content: space-around;
+                    width: 65%;
+                    margin: 20px auto 0 auto;
+                    button:first-child {
+                        @include button(0px, 9px, 50px);
+                        border: 1px solid #fff;
+                        cursor: pointer;
+                        background: #fff;
+                        text-align: center;
+                        align-self: center;
+                        margin-top: 20px;
+                        @include set-font-size-color(SansProSemiBold, 16px, #161624);
+                    }
+                    button:last-child {
+                        @include button(0px, 9px, 50px);
+                        border: 1px solid #fff;
+                        cursor: pointer;
+                        background: rgba(22,22,36,0.7);
+                        text-align: center;
+                        align-self: center;
+                        margin-top: 20px;
+                        @include set-font-size-color(SansProSemiBold, 16px, #fff);
+                    }
+                }
+                span {
+                    // margin-left: 5%;
+                    color: #E83A31;
+                }
+            }
+        }
+        .modal-title {
+            @include responsive(600px){
+                padding: 10px 0;
+                text-align: center;
+            }
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #344E71;
+            padding: 7px 20px;
+            border-radius: 0px;
+            >p {
+                @include responsive(384px) {
+                    font-size: 16px;
+                }
+                margin: 0;
+                @include set-font-size-color(SansProSemiBold, 20px, #fff);
+                align-self: center;
+            }
+            >:first-child {
+                @include responsive(600px) {
+                    margin-left: 0px;
+                    padding: 0 10px;
+                }
+                margin-left: 30px;
+            }
+            /* The Close Button */
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+                color: #fff;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
